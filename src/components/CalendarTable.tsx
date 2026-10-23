@@ -1,15 +1,7 @@
 import { useCallback, useMemo, useReducer } from "react";
 export type CalendarStatus = "queued" | "running" | "failed";
 
-export interface CalendarItem {
-  id: number;
-  title: string;
-  status: CalendarStatus;
-  score: number;
-}
-export interface CalendarTableProps {
-  heading?: string;
-  initialItems?: CalendarItem[];
+
   onSelect?: (item: CalendarItem) => void;
 }
 type Action =
